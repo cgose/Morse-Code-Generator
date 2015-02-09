@@ -1,31 +1,6 @@
 class MorseCodeGenerator:
 	def __init__ (self):
-		self.library = {"a" : ".-",
-						"b" : "-...",
-						"c" : "-.-.",
-						"d" : "-..",
-						"e" : ".",
-						"f" : "..-.",
-						"g" : "--.",
-						"h" : "....",
-						"i" : "..",
-						"j" : ".---",
-						"k" : "-.-",
-						"l" : ".-..",
-						"m" : "--",
-						"n" : "-.",
-						"o" : "---",
-						"p" : ".--.",
-						"q" : "--.-",
-						"r" : ".-.",
-						"s" : "...",
-						"t" : "-",
-						"u" : "..-",
-						"v" : "...-",
-						"w" : "...-",
-						"x" : "_.._",
-						"y" : "-.--",
-						"z" : "--..",
+		self.library = {
 						"A" : ".-",
 						"B" : "-...",
 						"C" : "-.-.",
@@ -67,6 +42,7 @@ class MorseCodeGenerator:
 
 	def encode(self, string):
 		cipher = ""
+		string = string.upper()
 		if(not(self.checkStringLength(string))):
 			for x in xrange(0,len(string)):
 				if x == len(string) - 1:

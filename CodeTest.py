@@ -4,7 +4,7 @@ from MorseCodeGenerator import *
 class CodeGeneratorTest(unittest.TestCase):
 
 	def setUp(self):
-		self.testText = "This is a test"
+		self.testText = "This is a test".upper()
 		self.testMorse = "- .... .. ... / .. ... / .- / - . ... -"
 		self.generator = MorseCodeGenerator()
 
